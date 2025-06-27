@@ -23,6 +23,9 @@ This repository showcases various experiments created through AI collaboration, 
 
 - [Todo App](./projects/web-apps/todo-app/) - Feature-rich task management application
   - **Original Prompt Source**: Vibe mode subpage of [Awesome ChatGPT Prompts](https://prompts.chat/vibe/)
+- [Drawing App](https://subtle-malasada-d2c3f6.netlify.app/) - Interactive drawing application with brush tools and canvas controls
+  - **Original Prompt Source**: [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) repository
+  - **Built with**: [Bolt.new](https://bolt.new/)
 
 ### 🎮 Games
 
