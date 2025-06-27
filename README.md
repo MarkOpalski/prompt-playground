@@ -38,7 +38,7 @@ Each project includes its own setup instructions and documentation. Navigate to 
 
 - [GitHub Copilot](https://github.com/features/copilot) - Primary code generation
 - [ChatGPT](https://openai.com/chatgpt) - Problem solving and architecture guidance
-- Community prompts from [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+- Community prompts from [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) by [@f](https://github.com/f)
 
 **My Role:**
 
