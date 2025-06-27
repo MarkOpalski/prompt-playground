@@ -10,15 +10,19 @@ Explore all projects at: **[https://markopalski.github.io/prompt-playground/](ht
 
 This repository showcases various experiments created through AI collaboration, demonstrating the power of prompt engineering and AI-assisted development. Each project represents a different exploration of creative coding, data visualization, web applications, and interactive tools.
 
+**🆕 New Feature**: Each project now includes a "View Prompt" button that displays the original AI prompt used to create it, providing complete transparency in the AI-assisted development process.
+
 ## 📁 Project Categories
 
 ### 📊 Visualizations
 
 - [Water Cycle Graph](./projects/visualizations/water-cycle-graph/) - Interactive water cycle visualization using Python and Graphviz
+  - **Original Prompt Source**: Root page of [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
 
 ### 🌐 Web Applications
 
 - [Todo App](./projects/web-apps/todo-app/) - Feature-rich task management application
+  - **Original Prompt Source**: Vibe mode subpage of [Awesome ChatGPT Prompts](https://prompts.chat/vibe/)
 
 ### 🎮 Games
 
@@ -31,6 +35,19 @@ This repository showcases various experiments created through AI collaboration, 
 ## 🚀 Quick Start
 
 Each project includes its own setup instructions and documentation. Navigate to any project folder to get started.
+
+## ✨ Interactive Features
+
+### 📝 Prompt Display Modals
+
+Each project on the live demo site includes a "View Prompt" button that opens a modal displaying:
+
+- **Original AI Prompt**: The exact prompt used to generate the project
+- **Source Attribution**: Links to [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) by [@f](https://github.com/f)
+- **Copy Functionality**: One-click copying of prompts for reuse
+- **Metadata**: Date, source platform, and prompt location information
+
+This transparency allows visitors to understand the AI collaboration process and reuse successful prompts for their own projects.
 
 ## 🛠 Development Approach
 
@@ -58,8 +75,18 @@ project-name/
 ├── requirements.txt   # Dependencies (if applicable)
 ├── src/              # Source code
 ├── docs/             # Demo files for GitHub Pages
+│   └── index.html    # Project demo with prompt modal
 └── assets/           # Images, data files, etc.
 ```
+
+### Demo Page Features
+
+Each project's demo page (`docs/index.html`) includes:
+
+- **Live Project Demo**: Fully functional application or visualization
+- **Navigation Controls**: Back to playground, view source, view prompt
+- **Prompt Modal**: Interactive display of the original AI prompt
+- **Professional Styling**: Consistent design matching the main site
 
 ## 🎨 Technologies Explored
 
@@ -76,6 +103,8 @@ project-name/
 - Create educational and interactive content
 - Build a portfolio of diverse technical projects
 - Document the collaborative AI development process
+- **Demonstrate prompt engineering transparency** through interactive modals
+- **Share reusable prompts** to help others learn AI-assisted development
 
 ## 🤝 Contributing
 
