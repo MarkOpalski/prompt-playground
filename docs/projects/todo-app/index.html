@@ -9,6 +9,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+      @keyframes modalAppear {
+        from {
+          opacity: 0;
+          transform: scale(0.9) translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="app-container">
@@ -28,6 +40,13 @@
           </button>
         </div>
       </header>
+
+      <!-- Navigation -->
+      <nav style="background: #f8f9fa; padding: 1rem 2rem; border-bottom: 1px solid #e2e8f0; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="../../" style="padding: 0.5rem 1rem; background: #e2e8f0; color: #4a5568; text-decoration: none; border-radius: 5px; font-weight: 500;">← Back to Playground</a>
+        <button onclick="showPromptModal()" style="padding: 0.5rem 1rem; background: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 500;">📝 View Original Prompt</button>
+        <a href="https://github.com/MarkOpalski/prompt-playground/tree/main/projects/web-apps/todo-app" style="padding: 0.5rem 1rem; background: #5a67d8; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">View Source Code</a>
+      </nav>
 
       <!-- Language Selector -->
       <div
@@ -274,6 +293,127 @@
     <div class="notification-container" id="notificationContainer">
       <!-- Notifications will be dynamically inserted here -->
     </div>
+
+    <!-- Modal for displaying prompt -->
+    <div id="promptModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 10000; backdrop-filter: blur(5px);">
+      <div style="background: white; border-radius: 12px; padding: 2rem; max-width: 800px; max-height: 80vh; width: 90%; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow-y: auto; animation: modalAppear 0.3s ease-out;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #e2e8f0;">
+          <h3 style="font-size: 1.5rem; font-weight: 600; color: #5a67d8; margin: 0;">Original Prompt: Feature-Rich Todo Application</h3>
+          <button onclick="closePromptModal()" style="background: none; border: none; font-size: 1.5rem; color: #666; cursor: pointer; padding: 0.5rem; border-radius: 50%;">&times;</button>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #666;">
+          <span style="background: #e2e8f0; padding: 0.25rem 0.5rem; border-radius: 4px;">Date: December 2024</span>
+          <span style="background: #e2e8f0; padding: 0.25rem 0.5rem; border-radius: 4px;">Source: GitHub Copilot Chat</span>
+          <span style="background: #e2e8f0; padding: 0.25rem 0.5rem; border-radius: 4px;">Location: Vibe mode subpage (https://prompts.chat/vibe/)</span>
+        </div>
+        <div style="background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.9rem; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">Create a comprehensive todo application with the following features:
+
+1. **Core Functionality:**
+   - Add, edit, delete tasks
+   - Mark tasks as complete/incomplete
+   - Task categories or lists
+   - Due dates and priorities
+
+2. **Advanced Features:**
+   - Drag and drop reordering
+   - Local storage persistence
+   - Search and filter capabilities
+   - Dark/light theme toggle
+   - Keyboard shortcuts
+
+3. **Technical Requirements:**
+   - Vanilla JavaScript (no frameworks)
+   - Responsive design
+   - Modern CSS with clean styling
+   - Service worker for offline functionality
+   - Progressive Web App features
+
+4. **User Experience:**
+   - Smooth animations and transitions
+   - Intuitive interface
+   - Accessible design
+   - Mobile-friendly
+
+Make it production-ready with proper error handling, data validation, and a polished user interface. The app should work completely offline and provide a seamless experience across devices.
+
+This project was created using prompts from the Awesome ChatGPT Prompts collection.</div>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; align-items: center;">
+          <button onclick="copyTodoPrompt()" style="background: #6366f1; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">Copy Prompt</button>
+          <a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 500;">🔗 Awesome ChatGPT Prompts</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPromptModal() {
+        document.getElementById('promptModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePromptModal() {
+        document.getElementById('promptModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      function copyTodoPrompt() {
+        const content = `Create a comprehensive todo application with the following features:
+
+1. **Core Functionality:**
+   - Add, edit, delete tasks
+   - Mark tasks as complete/incomplete
+   - Task categories or lists
+   - Due dates and priorities
+
+2. **Advanced Features:**
+   - Drag and drop reordering
+   - Local storage persistence
+   - Search and filter capabilities
+   - Dark/light theme toggle
+   - Keyboard shortcuts
+
+3. **Technical Requirements:**
+   - Vanilla JavaScript (no frameworks)
+   - Responsive design
+   - Modern CSS with clean styling
+   - Service worker for offline functionality
+   - Progressive Web App features
+
+4. **User Experience:**
+   - Smooth animations and transitions
+   - Intuitive interface
+   - Accessible design
+   - Mobile-friendly
+
+Make it production-ready with proper error handling, data validation, and a polished user interface. The app should work completely offline and provide a seamless experience across devices.
+
+This project was created using prompts from the Awesome ChatGPT Prompts collection.`;
+        
+        navigator.clipboard.writeText(content).then(() => {
+          const btn = event.target;
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.style.background = '#10b981';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '#6366f1';
+          }, 2000);
+        });
+      }
+
+      // Close modal when clicking outside
+      document.getElementById('promptModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closePromptModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && document.getElementById('promptModal').style.display === 'flex') {
+          closePromptModal();
+        }
+      });
+    </script>
 
     <script src="script.js"></script>
   </body>
