@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Playground - AI Experiments by Mark Opalski</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-title {
+            color: #5a67d8;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #5a67d8;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .category {
+            margin-bottom: 2rem;
+        }
+        
+        .category-title {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .tech-tag {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Prompt Playground</h1>
+            <p class="subtitle">AI-Generated Projects & Experiments by Mark Opalski</p>
+        </header>
+
+        <section class="category">
+            <h2 class="category-title">📊 Data Visualizations</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Water Cycle Graph</h3>
+                    <p class="project-description">
+                        Interactive visualization of the water cycle showing relationships between 
+                        evaporation, transpiration, condensation, precipitation, and other processes.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Graphviz</span>
+                        <span class="tech-tag">SVG</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="./projects/water-cycle/" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/MarkOpalski/prompt-playground/tree/main/projects/visualizations/water-cycle-graph" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">🌐 Web Applications</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Todo App</h3>
+                    <p class="project-description">
+                        Feature-rich task management application with drag-and-drop, 
+                        local storage, themes, and offline functionality.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="./projects/todo-app/" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/MarkOpalski/prompt-playground/tree/main/projects/web-apps/todo-app" class="btn btn-secondary">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">🚀 Coming Soon</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">More Experiments</h3>
+                    <p class="project-description">
+                        This playground is actively expanding! New AI-generated projects, 
+                        games, utilities, and creative coding experiments coming soon.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/MarkOpalski/prompt-playground" class="btn btn-secondary">Follow Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with AI collaboration • <a href="https://github.com/MarkOpalski" style="color: white;">@MarkOpalski</a></p>
+        </footer>
+    </div>
+</body>
+</html>
